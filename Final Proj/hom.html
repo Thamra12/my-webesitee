@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تعلم البرمجة للأطفال</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #D8BFD8; 
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100vh;
+        }
+
+        .container {
+            width: 80%;
+            background-color:white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            position: relative; /* مهم لجعل الصورة داخل المربع */
+        }
+
+        .navbar {
+            background-color:#FFF8DC;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .navbar nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .navbar nav ul li {
+            margin: 0;
+        }
+
+        .navbar nav ul li a {
+            text-decoration: none;
+            background-color: #e1bee7;
+            color: white;
+            display: block;
+            padding: 10px 20px;
+            border-radius: 8px;
+            transition: background 0.3s;
+        }
+
+        .navbar nav ul li a:hover {
+            background-color: #5a0080;
+        }
+
+        .content {
+            padding: 40px;
+            text-align: center;
+            background-color: #FFF8DC; /* أصفر فاتح */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+
+
+
+        }
+
+        h1 {
+            color: #6b3f72;
+        }
+
+        .description {
+            display: block;
+            background: linear-gradient(to right, #ffeb99, #ffb6e0);
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            transition: transform 0.2s, box-shadow 0.3s;
+            text-align: center;
+        }
+
+        .description:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .start-button {
+            background-color:#b28dc4 ;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .start-button:hover {
+            background-color: #5a0080;
+        }
+
+        /* تعديل وضع الصورة في الزاوية السفلى اليسرى */
+        .robot-img {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 200px; /* يمكنك تعديل الحجم */
+            transform: translateX(-30px); /* تحريك الصورة قليلاً إلى اليسار */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="navbar">
+            <nav>
+                <ul>
+                    <li><a href="#">الصفحة الرئيسية</a></li>
+                    <li><a href="welcome.html">الدروس</a></li>
+                    <li><a href="page.html">الاختبارات</a></li>
+                    <li><a href="rate.html">التقييمات</a></li>
+                    <li><a href="chat.html">اسأل صديقك</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="content">
+            <h1>تعلم البرمجة بأسلوب ممتع وسهل</h1>
+            <a href="lessons.html" class="description">
+                "منصة تعليمية تفاعلية تهدف إلى تعليم الأطفال أساسيات البرمجة باللغة العربية بطريقة ممتعة وسهلة. 
+                نقدم دروسًا تفاعلية، اختبارات مشوقة، تناسب أعمارهم، لمساعدتهم على تنمية مهارات التفكير المنطقي والإبداعي بطريقة ممتعة وآمنة."
+            </a>
+            <button class="start-button" onclick="window.location.href='welcome.html'">ابدأ رحلتك الممتعة</button>
+
+ </main>
+
+        <!-- إضافة رابط حول صورة الروبوت -->
+        <a href="chat.html"> <!-- هنا يمكنك استبدال "chat.html" برابط الصفحة التي تريد الانتقال إليها -->
+            <img src="robot.png" class="robot-img" alt="روبوت">
+        </a>
+    </div>
+
+</body>
+</html>

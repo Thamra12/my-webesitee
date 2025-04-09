@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Fun</title>
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            text-align: center;
+            background-color: #D8BFD8;
+            color: white;
+            margin: 0; 
+            padding: 0; 
+        }
+
+        .navbar {
+            background-color: #F5F5DC; 
+            padding: 10px 0; 
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 0; 
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white; 
+            font-size: 18px;
+            padding: 10px 20px;
+            background-color: #e1bee7;
+            border-radius: 10px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: #d1a2d3; 
+        }
+
+        h1 {
+            font-size: 30px;
+            margin: 20px 0; 
+            display: inline-block;
+            position: relative;
+            transition: color 0.3s; 
+        }
+
+        h1:hover {
+            color: #ffcc00; 
+        }
+
+        h1 span {
+            color: #5a0080;
+        }
+
+        .python {
+            display: inline-block;
+            color: #ffcc00; 
+            animation: moveUpDown 1s infinite alternate ease-in-out; 
+        }
+
+        @keyframes moveUpDown {
+            from { transform: translateY(0); }
+            to { transform: translateY(-5px); }
+        }
+
+        .container {
+            padding: 20px; 
+        }
+
+        .main-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 30px;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .adventure-card {
+            background-color: #f5f5dc; /* تغيير اللون الخلفي للبيج الفاتح */
+            width: 250px;
+            height: 350px; /* تحديد ارتفاع ثابت */
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+            text-align: center;
+            cursor: pointer;
+            position: relative;
+            display: flex;
+            flex-direction: column; /* توزيع العناصر عمودياً */
+            justify-content: space-between; /* توزيع العناصر بالتساوي داخل البطاقة */
+        }
+
+        .adventure-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .adventure-card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+
+        .adventure-card h3 {
+            margin: 20px 0;
+            color:  #e1bee7; 
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .adventure-card p {
+            font-size: 16px;
+            color: #444;
+            margin-bottom: 20px;
+        }
+
+        /* هنا نحدد اللون الثابت للزر */
+        .adventure-card a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50px; /* تحديد ارتفاع ثابت للأزرار */
+            padding: 15px;
+            background-color: #4a0066; /* اللون الثابت للمؤشر */
+            color: white; 
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+
+        /* عند التمرير على الزر */
+        .adventure-card a:hover {
+            background-color: #4a0066; /* الحفاظ على اللون الثابت عند التمرير */
+            color: white;
+        }
+
+        /* إزالة شريط التذييل */
+        .footer {
+            display: none; /* إزالة التذييل بالكامل */
+        }
+.navbar a:hover {
+            background-color: #5a0080;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="hom.html">الصفحة الرئيسية</a>
+        <a href="welcome.html">الدروس</a>
+        <a href="page.html">الاختبارات</a>
+        <a href="rate.html">التقييمات</a>
+        <a href="chat.html">اسأل صديقك</a>
+    </div>
+
+    <h1>"لنبدأ مغامرتنا البرمجية! كل فيديو هو خطوة نحو التميز! 🌟📺" <span></span></h1>
+
+    <div class="main-container">
+        <!-- درس الدوال وأنواعها -->
+        <div class="adventure-card">
+            <h3>الدوال وأنواعها</h3>
+            <p>تعلم كيفية تعريف الدوال في بايثون وفهم أنواعها المختلفة.</p>
+            <a href="https://www.youtube.com/watch?v=nhqAMVd2Re8" target="_blank">ابدأ التعلم</a>
+        </div>
+
+        <!-- درس حذف وإضافة عنصر من القائمة -->
+        <div class="adventure-card">
+            <h3>حذف وإضافة عنصر من القائمة</h3>
+            <p>اكتشف كيفية إضافة وحذف العناصر من القوائم في بايثون.</p>
+            <a href="https://www.youtube.com/watch?v=QrTLZuqTqOY" target="_blank">ابدأ التعلم</a>
+        </div>
+
+        <!-- درس المجموعات (Set) -->
+        <div class="adventure-card">
+            <h3>المجموعات (Set)</h3>
+            <p>استكشف كيفية استخدام المجموعات (Set) في بايثون وكيفية التعامل معها.</p>
+            <a href="https://www.youtube.com/watch?v=kp-LJqgJPmI" target="_blank">ابدأ التعلم</a>
+        </div>
+
+        <!-- درس التعامل مع الملفات -->
+        <div class="adventure-card">
+            <h3>التعامل مع الملفات</h3>
+            <p>تعلم كيفية فتح، قراءة، وكتابة الملفات في بايثون.</p>
+            <a href="https://www.youtube.com/watch?v=ZCmdm-RuRFA" target="_blank">ابدأ التعلم</a>
+        </div>
+    </div>
+
+    <!-- رابط إضافي في أسفل الصفحة -->
+    <div>
+        <a href="ask.html"></a>
+    </div>
+
+</body>
+</html>

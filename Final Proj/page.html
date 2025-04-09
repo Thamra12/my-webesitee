@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متعة البرمجة</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            text-align: center;
+            background-color: #D8BFD8;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+.navbar a:hover {
+            background-color: #5a0080;
+        }
+
+
+        .navbar {
+            background-color: #F5F5DC;
+            padding: 15px 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            padding: 10px 20px;
+            background-color: #e1bee7;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+
+        .container {
+            padding: 50px 20px;
+        }
+
+        h1 {
+            font-size: 40px;
+            margin-bottom: 10px;
+            display: inline-block;
+            position: relative;
+            animation: moveText 3s infinite alternate ease-in-out;
+            color: #FFD700; /* لون أصفر */
+        }
+
+        @keyframes moveText {
+            from {
+                transform: translateX(10px);
+            }
+            to {
+                transform: translateX(-10px);
+            }
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #755E20;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 15px 25px;
+            border-radius: 10px;
+            min-width: 180px;
+            font-weight: bold;
+        }
+
+        .btn-light {
+            background-color: white;
+            color: #FFC64B;
+            border-top-left-radius: 40px;
+            position: relative;
+        }
+
+        .btn-light img {
+            width: 35px;
+            margin-right: 10px;
+        }
+
+        .btn-dark {
+            background-color: #FCE38A;
+            color: #755E20;
+            border-top-right-radius: 40px;
+        }
+
+        .images-container {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 30px;
+        }
+
+        .icon {
+            width: 100px;
+            height: auto;
+      
+      
+     
+    </style>
+</head>
+<body>
+        
+    <div class="navbar">
+        <a href="chat.html">اسأل صديقك</a> 
+        <a href="rate.html">التقييمات</a> 
+        <a href="page.html">الاختبارات</a> 
+        <a href="welcome.html">الدروس</a> 
+        <a href="hom.html">الصفحة الرئيسية </a> 
+    </div>
+
+    <div class="container">
+        <h1>متعة البرمجة</h1>
+        <p>حان الوقت لنرى إبداعك البرمجي</p>
+
+        <div class="buttons">
+            <a href="quiz1.html" class="btn btn-light"> <!-- رابط الاختبار -->
+                <img src="light.jpg"> 
+                ابدأ الاختبار
+            </a>
+            <a href="ask.html" class="btn btn-dark"> <!-- رابط التمارين -->
+                تدرب قبل التحدي
+            </a>
+        </div>
+    </div>
+
+    <div class="images-container">
+        <img src="star.jpg" class="icon">
+        <img src="light.jpg" class="icon">
+    </div>
+
+</body>
+</html>

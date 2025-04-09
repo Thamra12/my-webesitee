@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اختبار المستوى الثالث</title>
+    <link rel="stylesheet" href="python-style.css">
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            direction: rtl; 
+            text-align: center; 
+            background-color: #e6ccff; 
+            margin: 0; 
+            padding: 0; 
+        }
+
+        h2 {
+            color: #4b0082;
+        }
+
+        .question { 
+            margin-bottom: 15px; 
+            font-size: 18px; 
+            font-weight: bold; 
+            background-color: #f5deb3; 
+            padding: 10px; 
+            border-radius: 5px;
+            display: inline-block;
+            text-align: right;
+        }
+
+        .options { 
+            margin-bottom: 20px; 
+        }
+
+        button { 
+            padding: 10px 20px; 
+            font-size: 16px; 
+            background-color: #4B0082; 
+            color: white; 
+            border: none; 
+            cursor: pointer; 
+            border-radius: 5px;
+        }
+
+        button:hover { 
+            background-color: #218838; 
+        }
+
+        .result { 
+            margin-top: 20px; 
+            font-size: 20px; 
+            font-weight: bold; 
+            color: blue; 
+        }
+
+        .time { 
+            font-size: 18px; 
+            font-weight: bold; 
+            color: red;
+        }
+
+        .navbar {
+            background-color: #F5F5DC;
+            padding: 15px 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            position: relative; 
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            padding: 10px 20px;
+            background-color: #e1bee7;
+            border-radius: 10px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: #5a0080;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="hom.html">الصفحة الرئيسية</a>
+        <a href="welcome.html">الدروس</a>
+        <a href="quiz1.html">الاختبارات</a>
+        <a href="rate.html">التقييمات</a>
+        <a href="chat.html">أسأل صديقك</a>
+    </div>
+
+    <h2>اختبار المستوى الثالث: الدوال والتعامل مع البيانات</h2>
+
+    <div class="time" id="timer">الوقت المتبقي: 05:00</div>
+
+    <form id="quiz3">
+        <div class="question">1. ما هي الدالة في بايثون؟</div>
+        <div class="options">
+            <input type="radio" name="q1" value="جزء من الكود يمكننا استخدامه عدة مرات"> جزء من الكود يمكننا استخدامه عدة مرات <br>
+            <input type="radio" name="q1" value="طريقة لكتابة القصة"> طريقة لكتابة القصة <br>
+            <input type="radio" name="q1" value="شيء يجعل الكود أطول"> شيء يجعل الكود أطول <br>
+            <input type="radio" name="q1" value="أداة للرسم"> أداة للرسم <br>
+        </div>
+
+        <div class="question">2. أي من الدوال التالية تُستخدم لحذف عنصر من القائمة؟</div>
+        <div class="options">
+            <input type="radio" name="q2" value="remove()"> remove() <br>
+            <input type="radio" name="q2" value="delete()"> delete() <br>
+            <input type="radio" name="q2" value="erase()"> erase() <br>
+            <input type="radio" name="q2" value="clear()"> clear() <br>
+        </div>
+
+        <div class="question">3. أي من هذه العلامات يُستخدم للتعليق في بايثون؟</div>
+        <div class="options">
+            <input type="radio" name="q3" value="#"> # <br>
+            <input type="radio" name="q3" value="//"> // <br>
+            <input type="radio" name="q3" value="--"> -- <br>
+            <input type="radio" name="q3" value="/* /"> / */ <br>
+        </div>
+
+        <div class="question">4. كيف نفتح ملفًا للقراءة في بايثون؟</div>
+        <div class="options">
+            <input type="radio" name="q4" value='open("file.txt", "r")'> open("file.txt", "r") <br>
+            <input type="radio" name="q4" value='open("file.txt", "w")'> open("file.txt", "w") <br>
+            <input type="radio" name="q4" value='open("file.txt", "a")'> open("file.txt", "a") <br>
+            <input type="radio" name="q4" value='open("file.txt", "x")'> open("file.txt", "x") <br>
+        </div>
+
+        <button type="button" onclick="checkAnswers()">إرسال الإجابات</button>
+        <div class="result" id="result3"></div>
+    </form>
+
+    <script>
+        var timeLeft = 300; // الوقت بالثواني (5 دقائق)
+        var timerElement = document.getElementById("timer");
+
+        function updateTimer() {
+            var minutes = Math.floor(timeLeft / 60);
+            var seconds = timeLeft % 60;
+            if (seconds < 10) {
+                seconds = "0" + seconds;
+            }
+            timerElement.innerHTML = "الوقت المتبقي: " + minutes + ":" + seconds;
+            timeLeft--;
+            if (timeLeft < 0) {
+                alert("انتهى الوقت! سيتم إرسال إجاباتك.");
+                checkAnswers();
+            }
+        }
+
+        setInterval(updateTimer, 1000);
+
+        function checkAnswers() {
+            var score = 0;
+            var totalQuestions = 4;
+
+            var correctAnswers = {
+                q1: "جزء من الكود يمكننا استخدامه عدة مرات",
+                q2: "remove()",
+                q3: "#",
+                q4: 'open("file.txt", "r")'
+            };
+
+            for (var i = 1; i <= totalQuestions; i++) {
+                var question = document.getElementsByName('q' + i);
+                for (var j = 0; j < question.length; j++) {
+                    if (question[j].checked && question[j].value === correctAnswers["q" + i]) {
+                        score++;
+                    }
+                }
+            }
+
+            var resultDiv = document.getElementById("result3");
+            resultDiv.innerHTML = `إجابتك صحيحة: ${score} من ${totalQuestions}`;
+            if (score === totalQuestions) {
+                resultDiv.style.color = "green";
+            } else {
+                resultDiv.style.color = "red";
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اختبار المستوى الأول</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            direction: rtl; 
+            text-align: center; 
+            background-color: #e6ccff; /* موف فاتح */
+            margin: 0; /* إزالة الهوامش */
+            padding: 0; /* إزالة الحشوات */
+        }
+
+        h2 {
+            color: #4b0082;
+            margin-top: 10px; /* تقليل المسافة العلوية */
+        }
+
+        .question { 
+            margin-bottom: 15px; 
+            font-size: 18px; 
+            font-weight: bold; 
+            background-color: #f5deb3; /* بيج فاتح */
+            padding: 10px; 
+            border-radius: 5px;
+            display: inline-block;
+            text-align: right;
+        }
+
+        .options { 
+            margin-bottom: 20px; 
+        }
+
+        button { 
+            padding: 10px 20px; 
+            font-size: 16px; 
+            background-color: #4B0082; 
+            color: white; 
+            border: none; 
+            cursor: pointer; 
+            border-radius: 5px;
+        }
+
+        button:hover { 
+            background-color: #218838; 
+        }
+
+        .result { 
+            margin-top: 20px; 
+            font-size: 20px; 
+            font-weight: bold; 
+            color: blue; 
+        }
+
+        /* تنسيق القائمة العلوية */
+        .navbar {
+            background-color: #F5F5DC;
+            padding: 10px 0; /* تقليل الحشوة العلوية */
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 0; /* إزالة المسافة السفلية */
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            padding: 10px 20px;
+            background-color: #e1bee7;
+            border-radius: 10px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: #5a0080;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- القائمة العلوية -->
+    <div class="navbar">
+        <a href="hom.html">الصفحة الرئيسية</a>
+        <a href="welcome.html">الدروس</a>
+        <a href="quiz1.html">الاختبارات</a>
+        <a href="rate.html">التقيمات</a>
+        <a href="chat.html">أسال صديقك</a>
+    </div>
+
+    <h2>اختبار المستوى الأول: أساسيات بايثون</h2>
+
+    <form id="quiz1">
+        <div class="question">1. ما هي اللغة التي نستخدمها في هذا الاختبار؟</div>
+        <div class="options">
+            <input type="radio" name="q1" value="بايثون"> بايثون <br>
+            <input type="radio" name="q1" value="إنجليزي"> إنجليزي <br>
+            <input type="radio" name="q1" value="عربي"> عربي <br>
+            <input type="radio" name="q1" value="رياضيات"> رياضيات <br>
+        </div>
+
+        <div class="question">2. ماذا نستخدم لطباعة شيء على الشاشة في بايثون؟</div>
+        <div class="options">
+            <input type="radio" name="q2" value="print()"> print() <br>
+            <input type="radio" name="q2" value="show()"> show() <br>
+            <input type="radio" name="q2" value="display()"> display() <br>
+            <input type="radio" name="q2" value="write()"> write() <br>
+        </div>
+
+        <div class="question">3. أي من التالي هو رقم في بايثون؟</div>
+        <div class="options">
+            <input type="radio" name="q3" value="10"> 10 <br>
+            <input type="radio" name="q3" value='"hello"'> "hello" <br>
+            <input type="radio" name="q3" value="True"> True <br>
+            <input type="radio" name="q3" value="[1, 2, 3]"> [1, 2, 3] <br>
+        </div>
+
+        <div class="question">4. ما هو رمز التعليق في بايثون؟</div>
+        <div class="options">
+            <input type="radio" name="q4" value="#"> # <br>
+            <input type="radio" name="q4" value="//"> // <br>
+            <input type="radio" name="q4" value="--"> -- <br>
+            <input type="radio" name="q4" value="/* */"> /* */ <br>
+        </div>
+
+        <div class="question">5.
+أي من هذه الأسماء يمكن أن يكون اسم متغير في بايثون؟</div>
+        <div class="options">
+            <input type="radio" name="q5" value="my_name"> my_name <br>
+            <input type="radio" name="q5" value="2cats"> 2cats <br>
+            <input type="radio" name="q5" value="hello world"> hello world <br>
+            <input type="radio" name="q5" value="print"> print <br>
+        </div>
+
+        <button type="button" onclick="checkAnswers()">إرسال الإجابات</button>
+        <div class="result" id="result1"></div>
+    </form>
+
+    <script>
+        function checkAnswers() {
+            let score = 0;
+            const correctAnswers = {
+                q1: "بايثون",
+                q2: "print()",
+                q3: "10",
+                q4: "#",
+                q5: "my_name"
+            };
+
+            for (let question in correctAnswers) {
+                const selectedOption = document.querySelector(`input[name="${question}"]:checked`);
+                if (selectedOption && selectedOption.value === correctAnswers[question]) {
+                    score++;
+                }
+            }
+
+            document.getElementById("result1").innerText = `نتيجتك: ${score} من 5`;
+        }
+    </script>
+
+</body>
+</html>

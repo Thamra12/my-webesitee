@@ -1,0 +1,119 @@
+/* إعدادات الخطوط والتنسيق العام */
+body {
+    font-family: 'Arial', sans-serif;
+    direction: rtl;
+    background: #D8BFD8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* الحاوية الرئيسية */
+.container {
+    display: flex;
+    width: 80%;
+    max-width: 900px;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* القسم الأيسر */
+.left-section {
+    background: #ffcc80;
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+}
+
+.left-section h1 {
+    font-size: 24px;
+    color: #5e35b1;
+        animation: moveLeftRight 3s infinite;
+
+    }
+ @keyframes moveLeftRight {
+            0%, 100% {
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateX(20px);
+            }
+
+}
+.robot-icon, .arduino-icon {
+    width: 80px;
+    margin: 10px auto;
+}
+
+/* القسم الأيمن */
+.right-section {
+    padding: 40px;
+    flex: 1;
+background-image: url('design2.jpg');
+}
+
+.right-section h2 {
+    color: #333;
+}
+
+.right-section p {
+    <p style="color: black;">يرجى إدخال البيانات</p>
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+button {
+    background: #5e35b1;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #4527a0;
+}
+
+a {
+    color: #5e35b1;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+
+
+}
+

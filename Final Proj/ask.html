@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تمارين البرمجة للأطفال</title>
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      text-align: center;
+      color: white;
+      margin: 0;
+      padding: 0;
+      direction: rtl;
+      background-image: linear-gradient(rgba(216, 191, 216, 0.85), rgba(216, 191, 216, 0.85)), url('photo1.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    .navbar {
+      background-color: #F5F5DC;
+      padding: 10px 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 0;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+      padding: 10px 20px;
+      background-color: #e1bee7;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .navbar a:hover {
+      background-color: #5a0080;
+    }
+
+    h1 {
+      font-size: 40px;
+      margin: 10px 0;
+      display: inline-block;
+      position: relative;
+      animation: moveText 3s infinite alternate ease-in-out;
+      color: #6a0dad;
+    }
+
+    @keyframes moveText {
+      from { transform: translateY(0); }
+      to { transform: translateY(-5px); }
+    }
+
+    .container {
+      padding: 50px 20px; 
+    }
+
+    .level {
+      background-color: #ffebcd;
+      border-radius: 15px;
+      padding: 20px;
+      margin: 10px;
+      width: 180px;
+      height: 180px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .level h2 {
+      color: #6a0dad;
+      font-size: 24px;
+    }
+
+    .level p {
+      font-size: 18px;
+      color: #333;
+    }
+
+    .btn {
+      background-color: #6a0dad;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+
+    .btn:hover {
+      background-color: #5a0080;
+    }
+
+    .image-container {
+      margin: 20px 0; 
+    }
+
+    .image-container img {
+      width: 400px;
+      height: 250px;
+      border-radius: 10px; 
+    }
+
+    .levels-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <a href="hom.html">الصفحة الرئيسية</a>
+    <a href="welcome.html">الدروس</a>
+    <a href="page.html">الاختبارات</a>
+    <a href="rate.html">التقييمات</a>
+    <a href="chat.html">اسأل صديقك</a>
+  </div>
+
+  <h1>تمارين البرمجة للأطفال</h1>
+
+  <div class="image-container">
+    <img src="photo1.png" alt="صورة تمارين البرمجة">
+  </div>
+
+  <div class="levels-container">
+    <div class="level">
+      <h2>المستوى الأول</h2>
+      <p>أساسيات بايثون</p>
+      <button class="btn" onclick="location.href='one.html'">ابدأ</button>
+    </div>
+
+    <div class="level">
+      <h2>المستوى الثاني</h2>
+      <p>الجمل الشرطية والقوائم</p>
+      <button class="btn" onclick="location.href='two.html'">ابدأ</button>
+    </div>
+
+    <div class="level">
+      <h2>المستوى الثالث</h2>
+      <p>الدوال وأنواعها</p>
+      <button class="btn" onclick="location.href='three.html'">ابدأ</button>
+    </div>
+  </div>
+
+</body>
+</html>
+

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحة التقييم</title>
+    <style>
+        body {
+            background-color: #F5E6CC; /* لون بيج */
+            text-align: center;
+            font-family: Arial, sans-serif;
+            direction: rtl;
+        }
+        h2 {
+            color: #BFA2DB; /* لون موف فاتح */
+            font-size: 36px; /* تكبير العنوان */
+            font-weight: bold;
+            margin-top: 50px;
+        }
+        .stars {
+            font-size: 50px; /* تكبير حجم النجوم */
+            cursor: pointer;
+            margin: 20px 0;
+        }
+        .star {
+            color: gray;
+            transition: color 0.3s;
+        }
+        .star.active {
+            color: gold;
+        }
+        .review-box {
+            margin-top: 30px;
+        }
+        h3 {
+            font-size: 28px; /* تكبير النص أسفل النجوم */
+            color: #BFA2DB; /* موف فاتح */
+            font-weight: bold;
+        }
+        textarea {
+            width: 70%;
+            height: 100px; /* تكبير صندوق النص */
+            font-size: 22px; /* تكبير حجم الخط */
+            border-radius: 15px;
+            border: none;
+            padding: 15px;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+            background-color: white;
+        }
+        .submit-btn {
+            display: block;
+            margin: 30px auto;
+            padding: 15px 40px; /* تكبير الزر */
+            font-size: 22px; /* تكبير حجم الخط */
+            color: white;
+            background-color: #BFA2DB; /* لون موف فاتح */
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .submit-btn:hover {
+            background-color: #A48AC6; /* درجة أغمق عند التمرير */
+        }
+        .icon {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 60px; /* تكبير الأيقونة */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="icon">📋</div>  <!-- أيقونة التقييم -->
+    <h2>كيف كانت تجربتك ؟</h2>
+    <div class="stars">
+        <span class="star" onclick="rate(1)">★</span>
+        <span class="star" onclick="rate(2)">★</span>
+        <span class="star" onclick="rate(3)">★</span>
+        <span class="star" onclick="rate(4)">★</span>
+        <span class="star" onclick="rate(5)">★</span>
+    </div>
+
+    <div class="review-box">
+        <h3>اخبرنا بالمزيد عن تجربتك</h3>
+        <textarea placeholder=""></textarea>
+        <button class="submit-btn">إرسال التقييم</button>
+    </div>
+
+    <script>
+        function rate(starCount) {
+            let stars = document.querySelectorAll('.star');
+            stars.forEach((star, index) => {
+                if (index < starCount) {
+                    star.classList.add('active');
+                } else {
+                    star.classList.remove('active');
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>

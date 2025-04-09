@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Fun</title>
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            text-align: center;
+            background-color: #D8BFD8;
+            color: white;
+            margin: 0; 
+            padding: 0; 
+        }
+
+        .navbar {
+            background-color: #F5F5DC; 
+            padding: 10px 0; 
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 0; 
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white; 
+            font-size: 18px;
+            padding: 10px 20px;
+            background-color: #e1bee7;
+            border-radius: 10px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: #d1a2d3; 
+        }
+
+        h1 {
+            font-size: 30px;
+            margin: 20px 0; 
+            display: inline-block;
+            position: relative;
+            transition: color 0.3s; 
+        }
+
+        h1:hover {
+            color: #ffcc00; 
+        }
+
+        h1 span {
+            color: #5a0080;
+        }
+
+        .python {
+            display: inline-block;
+            color: #ffcc00; 
+            animation: moveUpDown 1s infinite alternate ease-in-out; 
+        }
+
+        @keyframes moveUpDown {
+            from { transform: translateY(0); }
+            to { transform: translateY(-5px); }
+        }
+
+        .container {
+            padding: 20px; 
+        }
+
+        .main-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px; /* تقليص المسافة بين البطاقات */
+            padding: 30px;
+            margin-top: 40px;
+            align-items: stretch; /* لضمان أن جميع البطاقات لها نفس الارتفاع */
+        }
+
+        .adventure-card {
+            background-color: #f5f5dc; /* تغيير اللون الخلفي إلى البيج الفاتح */
+            width: 250px; /* الحجم المتوسط */
+            height: 380px; /* الحجم المتوسط */
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+            text-align: center;
+            cursor: pointer;
+            position: relative;
+            display: flex;
+            flex-direction: column; /* لتوزيع المحتوى عموديًا داخل البطاقة */
+            justify-content: space-between; /* لضمان توزيع المحتوى بشكل متساوي */
+        }
+
+        .adventure-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .adventure-card img {
+            width: 100%;
+            height: 180px; /* تعديل ارتفاع الصورة ليكون متوسط */
+            object-fit: cover;
+            border-radius: 20px;
+        }
+
+        .adventure-card h3 {
+            margin: 15px 0;
+            color:  #e1bee7; 
+            font-size: 24px; /* حجم الخط وسط */
+            font-weight: bold;
+        }
+
+        .adventure-card p {
+            font-size: 24px; /* حجم النص وسط */
+            color: #444;
+            margin-bottom: 15px;
+        }
+
+        .adventure-card a {
+            display: block;
+            padding: 10px;
+            background-color: #5a0080; /* تعديل اللون الخلفي للزر */
+            color: white; 
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 30px;
+            width: 80%; /* ضمان أن جميع الأزرار بنفس الحجم */
+            margin: 0 auto; /* لضبط الزر في الوسط */
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        /* تغيير لون الرابط عند التمرير */
+        .adventure-card a:hover {
+            background-color: #3e0066; /* اللون الموف الغامق عند التمرير */
+            color: white;
+        }
+
+        /* إزالة شريط التذييل */
+        .footer {
+            display: none; /* إزالة التذييل بالكامل */
+        }
+
+.navbar a:hover {
+            background-color: #5a0080;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="hom.html">الصفحة الرئيسية</a>
+        <a href="welcome.html">الدروس</a>
+        <a href="page.html">الاختبارات</a>
+        <a href="rate.html">التقييمات</a>
+        <a href="chat.html">اسأل صديقك</a>
+    </div>
+
+    <h1>"لنبدأ مغامرتنا البرمجية! كل فيديو هو خطوة نحو التميز! 🌟📺" <span></span></h1>
+
+    <div class="main-container">
+        <!-- درس التعامل مع الجملة الشرطية -->
+        <div class="adventure-card">
+            <h3>التعامل مع الجملة الشرطية</h3>
+            <p>تعلم كيفية استخدام الجمل الشرطية في بايثون للتحكم في تدفق البرنامج.</p>
+            <a href="https://www.youtube.com/watch?v=vi82NObAO4g" target="_blank">ابدأ التعلم</a>
+        </div>
+
+        <!-- درس التعامل مع القوائم (Tuple) -->
+        <div class="adventure-card">
+            <h3>التعامل مع القوائم (Tuple)</h3>
+            <p>استكشف كيفية العمل مع القوائم (Tuple) واستخدامها في بايثون.</p>
+            <a href="https://www.youtube.com/watch?v=oPsa5k3Mf7s" target="_blank">ابدأ التعلم</a>
+        </div>
+
+        <!-- درس التعامل مع القوائم (List) -->
+        <div class="adventure-card">
+            <h3>التعامل مع القوائم (List)</h3>
+            <p>تعلم كيفية التعامل مع القوائم في بايثون وإجراء العمليات المختلفة عليها.</p>
+            <a href="https://www.youtube.com/watch?v=1sNMZcx9X3U" target="_blank">ابدأ التعلم</a>
+        </div>
+    </div>
+
+    <!-- رابط إضافي في أسفل الصفحة -->
+    <div>
+        <a href="ask.html"></a>
+    </div>
+
+</body>
+</html>

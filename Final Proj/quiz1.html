@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>اختبارات بايثون للأطفال</title>
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      text-align: center;
+      background-color: #E1BEE7; /* خلفية موف فاتح */
+      color: white;
+      margin: 0;
+      padding: 0;
+      direction: rtl;
+      position: relative;
+    }
+
+    /* إضافة صورة شفافة كخلفية */
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('photo2.png'); /* مسار الصورة */
+      background-size: cover;
+      opacity: 0.3; /* زيادة الشفافية لتوضيح الصورة أكثر */
+      z-index: -1; /* جعل الصورة خلف المحتوى */
+    }
+
+    .navbar {
+      background-color: #F5F5DC;
+      padding: 10px 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 0;
+    }
+    .navbar a {
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+      padding: 10px 20px;
+      background-color: #e1bee7;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+    .navbar a:hover {
+      background-color: #5a0080;
+    }
+    h1 {
+      font-size: 40px;
+      margin: 10px 0;
+      display: inline-block;
+      position: relative;
+      animation: moveText 3s infinite alternate ease-in-out;
+      color: #6a0dad;
+    }
+    @keyframes moveText {
+      from { transform: translateY(0); }
+      to { transform: translateY(-5px); }
+    }
+    .container {
+      padding: 50px 20px; 
+    }
+    .level {
+      background-color: #ffebcd;
+      border-radius: 15px;
+      padding: 20px;
+      margin: 10px;
+      width: 200px;
+      height: 250px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      display: inline-block;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .level h2 {
+      color: #6a0dad;
+      font-size: 24px;
+    }
+    .level p {
+      font-size: 18px;
+      color: #333;
+    }
+    .btn {
+      background-color: #6a0dad;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+    .btn:hover {
+      background-color: #5a0080;
+    }
+    .image-container {
+      margin: 20px 0; 
+    }
+    .image-container img {
+      width: 400px; /* عرض أكبر */
+      height: 250px; /* ارتفاع ثابت لجعلها مستطيلة */
+      border-radius: 10px; 
+    }
+    .levels-container {
+      display: flex; /* عرض المستويات جنبًا إلى جنب */
+      justify-content: center; /* توسيط المستويات */
+      flex-wrap: wrap; /* السماح بتغليف المستويات إلى السطر التالي إذا لزم الأمر */
+      overflow-x: auto; /* السماح بالتنقل الأفقي عند الحاجة */
+      gap: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <a href="hom.html">الصفحة الرئيسية</a>
+    <a href="welcome.html">الدروس</a>
+    <a href="page.html">الاختبارات</a>
+    <a href="rate.html">التقييمات</a>
+    <a href="chat.html">اسأل صديقك</a>
+  </div>
+
+  <h1>اختبارات بايثون للأطفال</h1>
+
+  <div class="image-container">
+    <!-- هنا تم تغيير الرابط إلى صورة PNG شفافة -->
+    <img src="photo2.png">
+  </div>
+
+  <div class="levels-container">
+    <!-- المستوى الأول مع الرابط ومدة الاختبار -->
+    <div class="level">
+      <h2>المستوى الأول</h2>
+      <p>أساسيات بايثون</p>
+      <p><strong>المدة: 15-10 دقيقة</strong></p>
+      <button class="btn" onclick="location.href='quiz5.html'">ابدأ الاختبار</button>
+    </div>
+
+    <!-- المستوى الثاني مع الرابط ومدة الاختبار -->
+    <div class="level">
+      <h2>المستوى الثاني</h2>
+      <p>الجمل الشرطية والقوائم</p>
+      <p><strong>المدة: 20-15 دقيقة</strong></p>
+      <button class="btn" onclick="location.href='quiz2.html'">ابدأ الاختبار</button>
+    </div>
+
+    <!-- المستوى الثالث مع الرابط ومدة الاختبار -->
+    <div class="level">
+      <h2>المستوى الثالث</h2>
+      <p>الدوال وأنواعها</p>
+      <p><strong>المدة: 30-20 دقيقة</strong></p>
+      <button class="btn" onclick="location.href='quiz3.html'">ابدأ الاختبار</button>
+    </div>
+  </div>
+
+</body>
+</html>

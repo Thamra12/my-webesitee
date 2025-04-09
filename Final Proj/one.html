@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تمارين المستوى الأول - أساسيات بايثون</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #e1bee7; /* لون موف فاتح */
+            color: #333;
+            padding: 0;
+            margin: 0;
+            direction: rtl;
+        }
+        .navbar {
+            background-color: #f8f0e3; /* لون بيج للإطار العلوي */
+            padding: 15px 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 10px;
+        }
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            padding: 10px 20px;
+            background-color: #e1bee7;
+            border-radius: 10px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .navbar a:hover {
+            background-color: #5a0080;
+        }
+        .container {
+            padding: 30px 20px;
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff; /* خلفية بيضاء للقسم */
+            border-radius: 10px; /* زوايا دائرية */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            color: #333;
+        }
+        h2 {
+            color: #6a0dad;
+            margin-bottom: 20px;
+        }
+        .question {
+            margin-bottom: 20px;
+            padding: 20px;
+            text-align: right;
+        }
+        .question p {
+            margin-bottom: 8px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .options label {
+            display: block;
+            margin-bottom: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .submit-btn, .next-btn {
+            background-color: #6a0dad;
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #6a0dad;
+            text-align: right;
+            line-height: 1.6;
+        }
+        .next-btn {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- القائمة العلوية -->
+    <div class="navbar">
+        <a href="hom.html">الصفحة الرئيسية</a>
+        <a href="welcome.html">الدروس</a>
+        <a href="quiz1.html">الاختبارات</a>
+        <a href="rate.html">التقييمات</a>
+        <a href="chat.html">اسأل صديقك</a>
+    </div>
+
+    <div class="container">
+        <form id="level1">
+            <h2>تمارين المستوى الأول - أساسيات بايثون</h2>
+
+            <!-- سؤال 1 -->
+            <div class="question">
+                <p>سؤال 1: ما هي لغة بايثون؟</p>
+                <div class="options">
+                    <label><input type="radio" name="q1" value="A" required> لغة برمجة عالية المستوى</label>
+                    <label><input type="radio" name="q1" value="B"> نظام تشغيل</label>
+                    <label><input type="radio" name="q1" value="C"> برنامج تحرير نصوص</label>
+                    <label><input type="radio" name="q1" value="D"> متصفح إنترنت</label>
+                </div>
+            </div>
+            <!-- سؤال 2 -->
+            <div class="question">
+                <p>سؤال 2: ما هي الدالة المستخدمة لطباعة النصوص؟</p>
+                <div class="options">
+                    <label><input type="radio" name="q2" value="A" required> print()</label>
+                    <label><input type="radio" name="q2" value="B"> echo()</label>
+                    <label><input type="radio" name="q2" value="C"> show()</label>
+                    <label><input type="radio" name="q2" value="D"> display()</label>
+                </div>
+            </div>
+            <!-- سؤال 3 -->
+            <div class="question">
+<p>سؤال 3: كيف تعلن عن متغير في بايثون؟</p>
+                <div class="options">
+                    <label><input type="radio" name="q3" value="A" required> x = 5</label>
+                    <label><input type="radio" name="q3" value="B"> var x = 5</label>
+                    <label><input type="radio" name="q3" value="C"> int x = 5</label>
+                    <label><input type="radio" name="q3" value="D"> declare x = 5</label>
+                </div>
+            </div>
+            <!-- سؤال 4 -->
+            <div class="question">
+                <p>سؤال 4: ما الفرق بين الأعداد الصحيحة والعشرية؟</p>
+                <div class="options">
+                    <label><input type="radio" name="q4" value="A" required> الأعداد الصحيحة بدون كسور، والأعداد العشرية تحتوي على كسور</label>
+                    <label><input type="radio" name="q4" value="B"> الأعداد الصحيحة أكبر من العشرية</label>
+                    <label><input type="radio" name="q4" value="C"> لا فرق بينهما</label>
+                    <label><input type="radio" name="q4" value="D"> الأعداد العشرية فقط</label>
+                </div>
+            </div>
+            <!-- سؤال 5 -->
+            <div class="question">
+                <p>سؤال 5: ما هي القائمة (list)؟</p>
+                <div class="options">
+                    <label><input type="radio" name="q5" value="A" required> نوع من المتغيرات لتخزين مجموعة من العناصر</label>
+                    <label><input type="radio" name="q5" value="B"> دالة رياضية</label>
+                    <label><input type="radio" name="q5" value="C"> حلقة تكرار</label>
+                    <label><input type="radio" name="q5" value="D"> مكتبة برمجية</label>
+                </div>
+            </div>
+            <!-- سؤال 6 -->
+            <div class="question">
+                <p>سؤال 6: كيف تدمج قائمتين في بايثون؟</p>
+                <div class="options">
+                    <label><input type="radio" name="q6" value="A" required> باستخدام العامل +</label>
+                    <label><input type="radio" name="q6" value="B"> باستخدام دالة merge()</label>
+                    <label><input type="radio" name="q6" value="C"> باستخدام العامل -</label>
+                    <label><input type="radio" name="q6" value="D"> لا يمكن دمجهما</label>
+                </div>
+            </div>
+            <!-- سؤال 7 -->
+            <div class="question">
+                <p>سؤال 7: ما وظيفة دالة len()؟</p>
+                <div class="options">
+                    <label><input type="radio" name="q7" value="A" required> حساب عدد العناصر في القائمة</label>
+                    <label><input type="radio" name="q7" value="B"> طباعة القائمة</label>
+                    <label><input type="radio" name="q7" value="C"> فرز القائمة</label>
+                    <label><input type="radio" name="q7" value="D"> تحويل القائمة إلى نص</label>
+                </div>
+            </div>
+            <!-- سؤال 8 -->
+            <div class="question">
+                <p>سؤال 8: كيف تضيف عنصراً جديداً إلى القائمة؟</p>
+                <div class="options">
+                    <label><input type="radio" name="q8" value="A" required> باستخدام append()</label>
+                    <label><input type="radio" name="q8" value="B"> باستخدام add()</label>
+                    <label><input type="radio" name="q8" value="C"> باستخدام insert()</label>
+                    <label><input type="radio" name="q8" value="D"> باستخدام push()</label>
+                </div>
+            </div>
+            <!-- سؤال 9 -->
+            <div class="question">
+                <p>سؤال 9: اكتب جملة بسيطة تخلق قائمة تحتوي على الأعداد من 1 إلى 5.</p>
+                <div class="options">
+                    <label><input type="radio" name="q9" value="A" required> [1, 2, 3, 4, 5]</label>
+                    <label><input type="radio" name="q9" value="B"> (1, 2, 3, 4, 5)</label>
+                    <label><input type="radio" name="q9" value="C"> {1, 2, 3, 4, 5}</label>
+                    <label><input type="radio" name="q9" value="D"> 1,2,3,4,5</label>
+                </div>
+            </div>
+<!-- سؤال 10 -->
+            <div class="question">
+                <p>سؤال 10: لماذا تُعتبر القوائم مهمة في البرمجة؟</p>
+                <div class="options">
+                    <label><input type="radio" name="q10" value="A" required> لتنظيم وتخزين البيانات</label>
+                    <label><input type="radio" name="q10" value="B"> لتسريع العمليات الحسابية</label>
+                    <label><input type="radio" name="q10" value="C"> لإنشاء الواجهات</label>
+                    <label><input type="radio" name="q10" value="D"> للتعامل مع النصوص فقط</label>
+                </div>
+            </div>
+            <button type="submit" class="submit-btn">إرسال إجابات المستوى الأول</button>
+        </form>
+        <div id="results" class="result" style="display:none;"></div>
+        <button class="next-btn" id="nextButton" style="display:none;" onclick="location.href='ask.html'">التالي</button>
+    </div>
+
+    <script>
+        document.getElementById("level1").addEventListener("submit", function(e) {
+            e.preventDefault();
+            const results = [];
+            const answers = {
+                q1: 'A',
+                q2: 'A',
+                q3: 'A',
+                q4: 'A',
+                q5: 'A',
+                q6: 'A',
+                q7: 'A',
+                q8: 'A',
+                q9: 'A',
+                q10: 'A'
+            };
+
+            const formData = new FormData(this);
+            for (const [name, value] of formData.entries()) {
+                if (answers[name] === value) {
+                    results.push(`${name}: إجابتك صحيحة!`);
+                } else {
+                    results.push(`${name}: إجابتك خاطئة.`);
+                }
+            }
+
+            document.getElementById("results").innerHTML = results.join('<br>');
+            document.getElementById("results").style.display = 'block';
+            document.getElementById("nextButton").style.display = 'block';
+        });
+    </script>
+</body>
+</html>
