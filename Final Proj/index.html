@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول</title>
+    <style>
+        /* إعدادات الصفحة الأساسية */
+        body, html {
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow-y: scroll;
+        }
+
+        /* حاوية الصورة الخلفية */
+        .background-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('picture.png'); /* تأكد من وضع الصورة في مجلد images */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: -1; /* وضع الصورة خلف المحتوى */
+        }
+
+        /* حاوية النموذج */
+        .login-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* تصميم المربع */
+        .login-box {
+            background-color: rgba(255, 255, 255, 0.8); /* شفافية للمربع */
+            padding: 20px 15px;
+            border-radius: 20px; /* حواف مدورة */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* إضافة ظل */
+            width: 300px;
+            height: auto;
+            text-align: center;
+            position: absolute;
+            top: 10%; /* تم تعديل هذا السطر ليكون المربع أسفل قليلاً */
+            left: 50%;
+            transform: translateX(-50%); /* وسط المربع */
+            z-index: 3;
+            border: 10px solid #4a0066;
+        }
+
+        /* الشعار */
+        .login-box img {
+            width: 60px; /* زيادة حجم الشعار */
+            margin-bottom: 15px;
+        }
+
+        /* العنوان */
+        .login-box h2 {
+            color: #4a0066;
+            margin-bottom: 20px;
+            font-family: 'Comic Sans MS', sans-serif;
+            font-size: 24px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        /* تصميم المدخلات داخل المربع */
+        .login-box input {
+            width: 90%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .login-box input:focus {
+            border-color: #4a0066;
+            outline: none;
+            box-shadow: 0 0 10px rgba(74, 0, 102, 0.5);
+            transform: scale(1.05); /* تكبير الحقل عند التركيز */
+        }
+
+        /* تصميم الزر */
+        .login-box button {
+            width: 90%;
+            padding: 12px;
+            background-color: #4a0066;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .login-box button:hover {
+            background-color: #7a0066;
+            transform: scale(1.05);
+        }
+
+        /* تخصيص شريط التمرير */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #4a0066;
+            border-radius: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background-color: #f1f1f1;
+        }
+
+        /* استجابة للأجهزة الصغيرة */
+        @media (max-width: 768px) {
+            .login-box {
+                width: 85%;
+                height: auto;
+            }
+        }
+
+        /* تخصيص الروابط أسفل الصفحة */
+        .links-container {
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        .links-container a {
+            color: #4a0066;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .links-container a:hover {
+            color: #5a0080;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- حاوية الصورة الخلفية -->
+    <div class="background-container"></div>
+
+                   <!-- حاوية النموذج داخل مربع مستطيل -->
+    <div class="login-container">
+        <div class="login-box">
+            <!-- العنوان -->
+            <h2>تسجيل الدخول</h2>
+            
+            <!-- نموذج الإدخال -->
+            <form action="#" method="POST">
+                <input type="email" placeholder="البريد الإلكتروني" required>
+                <input type="password" placeholder="كلمة المرور" required>
+                <button type="submit">تسجيل الدخول</button>
+            </form>
+
+            <!-- الروابط أسفل الصفحة -->
+            <div class="links-container">
+                <p><a href="sign.html">إنشاء حساب جديد</a></p>
+                <p><a href="pass.html">نسيت كلمة المرور؟</a></p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
